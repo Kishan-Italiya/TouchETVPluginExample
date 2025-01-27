@@ -52,7 +52,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddk-uc-nlW">
                                         <rect key="frame" x="0.0" y="0.0" width="310" height="100"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="Button"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
                                     </button>
                                 </subviews>
@@ -217,7 +217,7 @@ The Marvel Cinematic Universe has been an absolute juggernaut of cinema for over
     <resources>
         <image name="ic_down" width="10" height="6"/>
         <namedColor name="blue">
-            <color red="0.22745098039215686" green="0.6705882352941176" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.22699999809265137" green="0.67100000381469727" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

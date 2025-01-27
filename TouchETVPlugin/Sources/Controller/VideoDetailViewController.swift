@@ -118,12 +118,12 @@ extension VideoDetailViewController : UITableViewDelegate, UITableViewDataSource
                 cell.lblVideoCount.text = "\(title) (\(count))"
                 cell.cvCategory.reloadData()
                 
-//                cell.ActorClick = { (actorID) -> Void in
-//                    let viewcontroller = ActorDetailsVC.storyboardInstance()
-//                    viewcontroller.modalPresentationStyle = .custom
-//                    viewcontroller.actorID = "\(actorID)"
-//                    self.navigationController?.pushViewController(viewcontroller, animated: true)
-//                }
+                cell.ActorClick = { (actorID) -> Void in
+                    let viewcontroller = ActorDetailsVC()
+                    viewcontroller.modalPresentationStyle = .custom
+                    viewcontroller.actorID = "\(actorID)"
+                    self.navigationController?.pushViewController(viewcontroller, animated: true)
+                }
             }
             
             return cell
@@ -140,12 +140,12 @@ extension VideoDetailViewController : UITableViewDelegate, UITableViewDataSource
                 cell.lblVideoCount.text = "\(title) (\(count))"
                 cell.cvCategory.reloadData()
                 
-//                cell.ActorClick = { (actorID) -> Void in
-//                    let viewcontroller = ActorDetailsVC.storyboardInstance()
-//                    viewcontroller.modalPresentationStyle = .custom
-//                    viewcontroller.actorID = "\(actorID)"
-//                    self.navigationController?.pushViewController(viewcontroller, animated: true)
-//                }
+                cell.ActorClick = { (actorID) -> Void in
+                    let viewcontroller = ActorDetailsVC()
+                    viewcontroller.modalPresentationStyle = .custom
+                    viewcontroller.actorID = "\(actorID)"
+                    self.navigationController?.pushViewController(viewcontroller, animated: true)
+                }
             }
             return cell
         }else if indexPath.row == 3{
@@ -160,12 +160,12 @@ extension VideoDetailViewController : UITableViewDelegate, UITableViewDataSource
                 cell.lblVideoCount.text = "\(title) (\(count))"
                 cell.cvCategory.reloadData()
                 
-//                cell.ActorClick = { (actorID) -> Void in
-//                    let viewcontroller = ActorDetailsVC.storyboardInstance()
-//                    viewcontroller.modalPresentationStyle = .custom
-//                    viewcontroller.actorID = "\(actorID)"
-//                    self.navigationController?.pushViewController(viewcontroller, animated: true)
-//                }
+                cell.ActorClick = { (actorID) -> Void in
+                    let viewcontroller = ActorDetailsVC()
+                    viewcontroller.modalPresentationStyle = .custom
+                    viewcontroller.actorID = "\(actorID)"
+                    self.navigationController?.pushViewController(viewcontroller, animated: true)
+                }
             }
             return cell
         }else {
@@ -180,12 +180,12 @@ extension VideoDetailViewController : UITableViewDelegate, UITableViewDataSource
             cell.lblVideoCount.text = "\(title) (\(count))"
             cell.cvCategory.reloadData()
             
-//            cell.brandClick = { (actorID) -> Void in
-//                let viewcontroller = BrandDetailsVC.storyboardInstance()
-//                viewcontroller.modalPresentationStyle = .custom
-//                viewcontroller.brandID = "\(actorID)"
-//                self.navigationController?.pushViewController(viewcontroller, animated: true)
-//            }
+            cell.brandClick = { (actorID) -> Void in
+                let viewcontroller = BrandDetailsVC()
+                viewcontroller.modalPresentationStyle = .custom
+                viewcontroller.brandID = "\(actorID)"
+                self.navigationController?.pushViewController(viewcontroller, animated: true)
+            }
             
             return cell
         }
