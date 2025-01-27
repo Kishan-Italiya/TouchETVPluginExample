@@ -66,12 +66,12 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         cell.VideoList = VideoListData
         cell.categoryCV.reloadData()
-//        cell.videoClick = { (videoDic) -> Void in
-//            let viewcontroller = VideoDetailViewController.storyboardInstance()
-//            viewcontroller.modalPresentationStyle = .custom
-//            viewcontroller.VideoListData = videoDic
-//            self.navigationController?.pushViewController(viewcontroller, animated: true)
-//        }
+        cell.MovieClick = { (videoDic) -> Void in
+            let viewcontroller = VideoDetailViewController()
+            viewcontroller.modalPresentationStyle = .custom
+            viewcontroller.VideoListData = videoDic
+            self.navigationController?.pushViewController(viewcontroller, animated: true)
+        }
         return cell
     }
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -15,7 +15,7 @@ class RecentMovieCell: UITableViewCell {
     public struct Identifiers {
         static let kMovieItemCVCell = "MovieItemCVCell"
     }
-    
+    var MovieClick : ((_ dic:HomeListModel)-> Void)?
     var VideoList : HomeData?
     var index = 0
     var userARY : [Actor]?
@@ -70,11 +70,11 @@ extension RecentMovieCell : UICollectionViewDelegate, UICollectionViewDelegateFl
         return CGSize(width: categoryCV.layer.bounds.width / 2.5 , height: categoryCV.layer.bounds.height)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if let action = videoClick{
-//            if let videoItem = VideoList?[indexPath.row] {
-//                action(videoItem)
-//            }
-//        }
+        if let action = MovieClick{
+            if let videoItem = VideoList?[indexPath.row] {
+                action(videoItem)
+            }
+        }
     }
     func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool {
         true
