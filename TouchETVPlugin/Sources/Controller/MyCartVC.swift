@@ -244,7 +244,6 @@ extension MyCartVC : UITableViewDelegate, UITableViewDataSource {
             }else{
                 headerCell.checkBTN.setImage(UIImage(named: "check-box"), for: .normal)
             }
-            
             headerCell.brandSelectChange = { status in
                 if status{
                     headerCell.checkBTN.setImage(UIImage(named: "check-box"), for: .normal)
