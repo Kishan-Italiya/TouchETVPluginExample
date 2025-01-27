@@ -110,12 +110,12 @@ extension ActorDetailsVC : UITableViewDelegate, UITableViewDataSource {
                 cell.lblVideoCount.text = "\(title) (\(count))"
                 cell.cvCategory.reloadData()
                 
-//                cell.MovieClick = { (videoDic) -> Void in
-//                    let viewcontroller = VideoDetailsFromOtherVC.storyboardInstance()
-//                    viewcontroller.modalPresentationStyle = .custom
-//                    viewcontroller.VideoListData = videoDic
-//                    self.navigationController?.pushViewController(viewcontroller, animated: true)
-//                }
+                cell.MovieClick = { (videoDic) -> Void in
+                    let viewcontroller = VideoDetailsFromOtherVC()
+                    viewcontroller.modalPresentationStyle = .custom
+                    viewcontroller.VideoListData = videoDic
+                    self.navigationController?.pushViewController(viewcontroller, animated: true)
+                }
             }
             return cell
             
@@ -133,12 +133,12 @@ extension ActorDetailsVC : UITableViewDelegate, UITableViewDataSource {
                 cell.lblVideoCount.text = "\(title) (\(count))"
                 cell.cvCategory.reloadData()
                 
-//                cell.MovieClick = { (videoDic) -> Void in
-//                    let viewcontroller = VideoDetailsFromOtherVC.storyboardInstance()
-//                    viewcontroller.modalPresentationStyle = .custom
-//                    viewcontroller.VideoListData = videoDic
-//                    self.navigationController?.pushViewController(viewcontroller, animated: true)
-//                }
+                cell.MovieClick = { (videoDic) -> Void in
+                    let viewcontroller = VideoDetailsFromOtherVC()
+                    viewcontroller.modalPresentationStyle = .custom
+                    viewcontroller.VideoListData = videoDic
+                    self.navigationController?.pushViewController(viewcontroller, animated: true)
+                }
             }
             
             return cell
@@ -156,12 +156,12 @@ extension ActorDetailsVC : UITableViewDelegate, UITableViewDataSource {
                 cell.lblVideoCount.text = "\(title) (\(count))"
                 cell.cvCategory.reloadData()
                 
-//                cell.MovieClick = { (videoDic) -> Void in
-//                    let viewcontroller = VideoDetailsFromOtherVC.storyboardInstance()
-//                    viewcontroller.modalPresentationStyle = .custom
-//                    viewcontroller.VideoListData = videoDic
-//                    self.navigationController?.pushViewController(viewcontroller, animated: true)
-//                }
+                cell.MovieClick = { (videoDic) -> Void in
+                    let viewcontroller = VideoDetailsFromOtherVC()
+                    viewcontroller.modalPresentationStyle = .custom
+                    viewcontroller.VideoListData = videoDic
+                    self.navigationController?.pushViewController(viewcontroller, animated: true)
+                }
             }
             
             return cell
