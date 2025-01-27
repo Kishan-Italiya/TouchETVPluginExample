@@ -27,6 +27,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func profileClick_Action(_ sender: Any) {
+       
+    }
+    @IBAction func CartClick_Action(_ sender: Any) {
+        let viewcontroller = MyCartVC()
+        viewcontroller.modalPresentationStyle = .custom
+        self.navigationController?.pushViewController(viewcontroller, animated: true)
     }
     func ConfigureTableView(){
         dataTBL.delegate = self

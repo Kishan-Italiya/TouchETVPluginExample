@@ -71,6 +71,8 @@ let package = Package(
                 
                 //MARK: - ViewController
                 .copy("Controller/VideoDetailViewController.xib"),
+                .copy("check-box-empty.png"), // Add your empty checkbox image
+                .copy("check-box.png")
             ]),
         .testTarget(
             name: "TouchETVPluginTests",

@@ -105,13 +105,13 @@ extension BrandDetailsVC : UITableViewDelegate, UITableViewDataSource {
             cell.productCV.reloadData()
             cell.gotoSotreBTN.isHidden = true
             
-//            cell.prodcutClick = { indexp in
-//                let viewcontroller = ProdutDetailsVC.storyboardInstance()
-//                viewcontroller.modalPresentationStyle = .custom
-//                let prodID = self.brandData?.products?[indexp].id ?? 0
-//                viewcontroller.productID = "\(prodID)"
-//                self.navigationController?.pushViewController(viewcontroller, animated: true)
-//            }
+            cell.prodcutClick = { indexp in
+                let viewcontroller = ProdutDetailsVC()
+                viewcontroller.modalPresentationStyle = .custom
+                let prodID = self.brandData?.products?[indexp].id ?? 0
+                viewcontroller.productID = "\(prodID)"
+                self.navigationController?.pushViewController(viewcontroller, animated: true)
+            }
             return cell
         }else if indexPath.row == 2{
             let cell = brandDetailsTBL.dequeueReusableCell(withIdentifier: Identifiers.kCustomerReviewTBLCell, for: indexPath) as! CustomerReviewTBLCell
@@ -126,12 +126,12 @@ extension BrandDetailsVC : UITableViewDelegate, UITableViewDataSource {
             cell.lblVideoCount.text = "Movies(\(brandData?.projects?.count ?? 0))"
             cell.cvCategory.reloadData()
             
-//            cell.MovieClick = { (videoDic) -> Void in
-//                let viewcontroller = VideoDetailsFromOtherVC.storyboardInstance()
-//                viewcontroller.modalPresentationStyle = .custom
-//                viewcontroller.VideoListData = videoDic
-//                self.navigationController?.pushViewController(viewcontroller, animated: true)
-//            }
+            cell.MovieClick = { (videoDic) -> Void in
+                let viewcontroller = VideoDetailsFromOtherVC()
+                viewcontroller.modalPresentationStyle = .custom
+                viewcontroller.VideoListData = videoDic
+                self.navigationController?.pushViewController(viewcontroller, animated: true)
+            }
             return cell
         }
     }

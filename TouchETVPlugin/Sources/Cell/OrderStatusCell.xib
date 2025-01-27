@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="580" height="126"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1x-TA-6sR" customClass="UIViewX" customModule="TouchE_TV" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1x-TA-6sR" customClass="UIViewX" customModule="TouchETVPlugin">
                         <rect key="frame" x="0.0" y="2" width="580" height="122"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viN-WA-foO">
