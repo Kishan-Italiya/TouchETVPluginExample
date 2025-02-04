@@ -21,7 +21,10 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13Z-Xg-b3D">
                         <rect key="frame" x="0.0" y="66" width="976" height="70"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwO-tK-SR0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-box-empty" translatesAutoresizingMaskIntoConstraints="NO" id="yyk-M1-DrV">
+                                <rect key="frame" x="20" y="10" width="50" height="50"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwO-tK-SR0">
                                 <rect key="frame" x="20" y="10" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Ufv-dl-euW"/>
@@ -29,8 +32,7 @@
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="check-box-empty"/>
-                                <buttonConfiguration key="configuration" style="plain" image="check-box-empty"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
                                     <action selector="checkClick_Action:" destination="fBs-An-CcD" eventType="primaryActionTriggered" id="sDn-du-eEV"/>
                                 </connections>
@@ -45,10 +47,14 @@
                         <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.059602649006622516" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nwO-tK-SR0" firstAttribute="centerY" secondItem="13Z-Xg-b3D" secondAttribute="centerY" id="4xb-W6-U06"/>
+                            <constraint firstItem="yyk-M1-DrV" firstAttribute="trailing" secondItem="nwO-tK-SR0" secondAttribute="trailing" id="9N2-uC-y18"/>
+                            <constraint firstItem="yyk-M1-DrV" firstAttribute="top" secondItem="nwO-tK-SR0" secondAttribute="top" id="ARx-rI-4o9"/>
                             <constraint firstItem="nwO-tK-SR0" firstAttribute="leading" secondItem="13Z-Xg-b3D" secondAttribute="leading" constant="20" id="EZZ-Sb-tYP"/>
+                            <constraint firstItem="yyk-M1-DrV" firstAttribute="bottom" secondItem="nwO-tK-SR0" secondAttribute="bottom" id="GP2-4b-zCA"/>
                             <constraint firstItem="xaQ-tY-H2L" firstAttribute="leading" secondItem="13Z-Xg-b3D" secondAttribute="leading" constant="85" id="W96-Eg-873"/>
                             <constraint firstItem="xaQ-tY-H2L" firstAttribute="centerY" secondItem="13Z-Xg-b3D" secondAttribute="centerY" id="cdY-qa-ldc"/>
                             <constraint firstAttribute="trailing" secondItem="xaQ-tY-H2L" secondAttribute="trailing" constant="10" id="oax-aM-g9a"/>
+                            <constraint firstItem="yyk-M1-DrV" firstAttribute="leading" secondItem="nwO-tK-SR0" secondAttribute="leading" id="og1-B5-7u4"/>
                             <constraint firstAttribute="height" constant="70" id="ojA-fI-Uhf"/>
                         </constraints>
                     </view>
@@ -67,6 +73,7 @@
                 <outlet property="brandNameLBL" destination="xaQ-tY-H2L" id="bFi-qm-aq0"/>
                 <outlet property="brandNameLeftCON" destination="W96-Eg-873" id="h1x-q7-TJQ"/>
                 <outlet property="checkBTN" destination="nwO-tK-SR0" id="NYs-qf-qGn"/>
+                <outlet property="checkIMG" destination="yyk-M1-DrV" id="NTo-Zm-d6A"/>
             </connections>
             <point key="canvasLocation" x="-268" y="6"/>
         </tableViewCell>

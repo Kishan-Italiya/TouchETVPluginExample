@@ -9,6 +9,7 @@ import UIKit
 class CartItemCell: UITableViewCell {
 
     
+    @IBOutlet weak var checkIMG: UIImageView!
     @IBOutlet weak var checkBTN: UIButton!
     @IBOutlet weak var productIMG: UIImageViewX!
     @IBOutlet weak var nameLBL: UILabel!
@@ -85,7 +86,7 @@ class CartItemCell: UITableViewCell {
     }
 
     @IBAction func checkClick_Action(_ sender: UIButton) {
-        if checkBTN.currentImage == UIImage(named: "check-box-empty"){
+        if checkIMG.image == UIImage(named: "check-box-empty", in: Bundle.module, with: nil){
             if let action = productSelectChange{
                 action(true)
             }

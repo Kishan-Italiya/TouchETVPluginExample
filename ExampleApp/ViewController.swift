@@ -27,7 +27,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func profileClick_Action(_ sender: Any) {
-       
+        let viewcontroller = ProfileVC()
+        viewcontroller.modalPresentationStyle = .custom
+        self.navigationController?.pushViewController(viewcontroller, animated: true)
     }
     @IBAction func CartClick_Action(_ sender: Any) {
         let viewcontroller = MyCartVC()

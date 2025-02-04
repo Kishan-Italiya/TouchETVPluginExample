@@ -21,6 +21,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2v-Pb-8lN">
                         <rect key="frame" x="0.0" y="0.0" width="1248" height="479"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-box-empty" translatesAutoresizingMaskIntoConstraints="NO" id="7iz-3x-DQd">
+                                <rect key="frame" x="20" y="20" width="50" height="50"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zud-Yo-3Lu">
                                 <rect key="frame" x="20" y="20" width="50" height="50"/>
                                 <constraints>
@@ -29,7 +32,7 @@
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <buttonConfiguration key="configuration" style="plain" image="check-box-empty"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
                                     <action selector="checkClick_Action:" destination="fBs-An-CcD" eventType="primaryActionTriggered" id="CrO-YD-13p"/>
                                 </connections>
@@ -233,14 +236,18 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="KJE-W0-rFg" secondAttribute="trailing" constant="20" id="0ME-35-YvC"/>
                             <constraint firstItem="Sys-22-dCE" firstAttribute="top" secondItem="z2v-Pb-8lN" secondAttribute="top" constant="20" id="0zM-Z9-Bvp"/>
+                            <constraint firstItem="7iz-3x-DQd" firstAttribute="trailing" secondItem="Zud-Yo-3Lu" secondAttribute="trailing" id="1lC-8s-oXE"/>
                             <constraint firstAttribute="trailing" secondItem="pHr-Zh-f7h" secondAttribute="trailing" constant="20" id="3ev-fO-dCn"/>
                             <constraint firstAttribute="trailing" secondItem="sdC-Qp-f9H" secondAttribute="trailing" constant="20" id="4Vd-W3-cah"/>
                             <constraint firstItem="sdC-Qp-f9H" firstAttribute="top" secondItem="z2v-Pb-8lN" secondAttribute="top" constant="20" id="4ta-JA-rbV"/>
+                            <constraint firstItem="7iz-3x-DQd" firstAttribute="top" secondItem="Zud-Yo-3Lu" secondAttribute="top" id="8XE-e2-JD7"/>
                             <constraint firstItem="SH2-qp-QvX" firstAttribute="top" secondItem="fKg-Vr-z2v" secondAttribute="bottom" constant="20" id="C7U-eW-YNT"/>
                             <constraint firstItem="fKg-Vr-z2v" firstAttribute="top" secondItem="sdC-Qp-f9H" secondAttribute="bottom" constant="20" id="Df9-8W-FDO"/>
                             <constraint firstItem="WQv-WF-o4z" firstAttribute="leading" secondItem="Sys-22-dCE" secondAttribute="trailing" constant="15" id="FvH-Kg-RbV"/>
                             <constraint firstItem="KJE-W0-rFg" firstAttribute="top" secondItem="h8g-xo-fI4" secondAttribute="bottom" constant="15" id="INO-F5-ftt"/>
                             <constraint firstItem="UMK-sX-Mvu" firstAttribute="leading" secondItem="Sys-22-dCE" secondAttribute="trailing" constant="15" id="JCc-Tq-hL7"/>
+                            <constraint firstItem="7iz-3x-DQd" firstAttribute="leading" secondItem="Zud-Yo-3Lu" secondAttribute="leading" id="JT9-ep-cKb"/>
+                            <constraint firstItem="7iz-3x-DQd" firstAttribute="bottom" secondItem="Zud-Yo-3Lu" secondAttribute="bottom" id="KkI-cq-1KW"/>
                             <constraint firstItem="KJE-W0-rFg" firstAttribute="leading" secondItem="SH2-qp-QvX" secondAttribute="leading" id="LdO-97-9Uu"/>
                             <constraint firstItem="SH2-qp-QvX" firstAttribute="leading" secondItem="WQv-WF-o4z" secondAttribute="leading" id="Ntb-nH-pw9"/>
                             <constraint firstItem="Zud-Yo-3Lu" firstAttribute="leading" secondItem="z2v-Pb-8lN" secondAttribute="leading" constant="20" id="QJI-jc-ID2"/>
@@ -272,6 +279,7 @@
                 <outlet property="attributeCV" destination="KJE-W0-rFg" id="ZlQ-mY-uFA"/>
                 <outlet property="backUV" destination="z2v-Pb-8lN" id="kO9-7q-oV5"/>
                 <outlet property="checkBTN" destination="Zud-Yo-3Lu" id="Ce3-gX-y2T"/>
+                <outlet property="checkIMG" destination="7iz-3x-DQd" id="9mD-kg-6be"/>
                 <outlet property="collectionHeightCON" destination="w8Z-mA-Z9D" id="bro-sJ-DTB"/>
                 <outlet property="nameLBL" destination="UMK-sX-Mvu" id="HK1-md-pBb"/>
                 <outlet property="priceLBL" destination="WQv-WF-o4z" id="urw-Jq-P96"/>

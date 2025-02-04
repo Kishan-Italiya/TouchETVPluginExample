@@ -90,10 +90,10 @@ public class MyCartVC: UIViewController {
         } else {
             self.totalCostCalculate()
             if selectedCartDataID.count > 0{
-//                let vc = mainStoryboard.instantiateViewController(withIdentifier: "CheckOutVC") as! CheckOutVC
-//                vc.modalPresentationStyle = .custom
-//                vc.selectedCartDataId = selectedCartDataID
-//                self.navigationController?.pushViewController(vc, animated: true)
+                let vc = CheckOutVC()
+                vc.modalPresentationStyle = .custom
+                vc.selectedCartDataId = selectedCartDataID
+                self.navigationController?.pushViewController(vc, animated: true)
             }else{
                 self.ShowAlert(title: "Error", message: "Please select product for checkout!")
             }
@@ -240,13 +240,13 @@ extension MyCartVC : UITableViewDelegate, UITableViewDataSource {
             headerCell.brandNameLBL.text = "\(currentDic.value(forKey: "brandName")!)"
             
             if currentDic.value(forKey: "isAllSelect") as! String == "0"{
-                headerCell.checkBTN.setImage(UIImage(named: "check-box-empty"), for: .normal)
+                headerCell.checkIMG.image = UIImage(named: "check-box-empty", in: Bundle.module, with: nil)
             }else{
-                headerCell.checkBTN.setImage(UIImage(named: "check-box"), for: .normal)
+                headerCell.checkIMG.image = UIImage(named: "check-box", in: Bundle.module, with: nil)
             }
             headerCell.brandSelectChange = { status in
                 if status{
-                    headerCell.checkBTN.setImage(UIImage(named: "check-box"), for: .normal)
+                   headerCell.checkIMG.image = UIImage(named: "check-box", in: Bundle.module, with: nil)
                     currentDic.setValue("1", forKey: "isAllSelect")
                     let dataARY = currentDic.value(forKey: "productsARY") as! NSMutableArray
                     for i in 0..<dataARY.count{
@@ -261,7 +261,7 @@ extension MyCartVC : UITableViewDelegate, UITableViewDataSource {
                     
                     
                 }else{
-                    headerCell.checkBTN.setImage(UIImage(named: "check-box-empty"), for: .normal)
+                    headerCell.checkIMG.image = UIImage(named: "check-box-empty", in: Bundle.module, with: nil)
                     currentDic.setValue("0", forKey: "isAllSelect")
                     //self.customDataARY.replaceObject(at: section, with: currentDic)
                     
@@ -280,7 +280,7 @@ extension MyCartVC : UITableViewDelegate, UITableViewDataSource {
             }
             
         }else{
-            headerCell.checkBTN.setImage(UIImage(named: "ic_mycart"), for: .normal)
+            headerCell.checkBTN.setImage(UIImage(named: "ic_mycart", in: Bundle.module, with: nil), for: .normal)
             headerCell.brandNameLBL.text = "Order summary"
         }
         
@@ -402,25 +402,26 @@ extension MyCartVC : UITableViewDelegate, UITableViewDataSource {
         
         if currentDic.value(forKey: "isAllSelect") as! String == "0"{
             if productDic.value(forKey: "isSelected") as! String == "0"{
-                cell.checkBTN.setImage(UIImage(named: "check-box-empty"), for: .normal)
+               cell.checkIMG.image = UIImage(named: "check-box-empty", in: Bundle.module, with: nil)
+                
             }else{
-                cell.checkBTN.setImage(UIImage(named: "check-box"), for: .normal)
+               cell.checkIMG.image = UIImage(named: "check-box", in: Bundle.module, with: nil)
             }
         }else{
-            cell.checkBTN.setImage(UIImage(named: "check-box"), for: .normal)
+            cell.checkIMG.image = UIImage(named: "check-box", in: Bundle.module, with: nil)
         }
         
         
         cell.productSelectChange = { status in
             if status{
-                cell.checkBTN.setImage(UIImage(named: "check-box"), for: .normal)
+               cell.checkIMG.image = UIImage(named: "check-box", in: Bundle.module, with: nil)
                 productDic.setValue("1", forKey: "isSelected")
                 dataARY.replaceObject(at: indexPath.row, with: productDic)
                 currentDic.setValue(dataARY, forKey: "productsARY")
                 self.customDataARY.replaceObject(at: indexPath.section, with: currentDic)
                 
             }else{
-                cell.checkBTN.setImage(UIImage(named: "check-box-empty"), for: .normal)
+                cell.checkIMG.image = UIImage(named: "check-box-empty", in: Bundle.module, with: nil)
                 productDic.setValue("0", forKey: "isSelected")
                 dataARY.replaceObject(at: indexPath.row, with: productDic)
                 currentDic.setValue(dataARY, forKey: "productsARY")
@@ -480,8 +481,7 @@ extension MyCartVC : UITableViewDelegate, UITableViewDataSource {
             
         }
         return cell
-        
-        
+
     }
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let currentDic = self.customDataARY.object(at: indexPath.section) as! NSDictionary

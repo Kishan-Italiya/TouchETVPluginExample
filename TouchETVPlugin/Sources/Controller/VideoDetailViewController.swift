@@ -53,16 +53,16 @@ public class VideoDetailViewController: UIViewController {
         tblList.preservesSuperviewLayoutMargins = false
     }
     @IBAction func playClick_Action(_ sender: UIButton) {
-//        rotate_flag = true
+        rotate_flag = true
 //        let viewcontroller = mainStoryboard.instantiateViewController(withIdentifier: "VideoViewController") as! VideoViewController
-//        viewcontroller.VideoString = self.VideoListData?.videoURL ?? ""
-//        viewcontroller.VideoListDic = self.VideoListData
-//        viewcontroller.brandID = "\(self.VideoListData?.brands?[0].id ?? 0)"
-//        let nav = UINavigationController(rootViewController: viewcontroller)
-//        nav.isNavigationBarHidden = true
-//        nav.modalPresentationStyle = .fullScreen
-//        self.present(nav, animated: true)
-        
+        let viewcontroller = VideoViewController()
+        viewcontroller.VideoString = self.VideoListData?.videoURL ?? ""
+        viewcontroller.VideoListDic = self.VideoListData
+        viewcontroller.brandID = "\(self.VideoListData?.brands?[0].id ?? 0)"
+        let nav = UINavigationController(rootViewController: viewcontroller)
+        nav.isNavigationBarHidden = true
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true)
     }
     
 }

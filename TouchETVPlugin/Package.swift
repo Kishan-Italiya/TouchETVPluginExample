@@ -70,9 +70,17 @@ let package = Package(
                 
                 
                 //MARK: - ViewController
+                .copy("Controller/AddAddressVC.xib"),
+                .copy("Controller/ChangePasswordVC.xib"),
+                .copy("Controller/EditProfileVC.xib"),
+                .copy("Controller/LogoutPopupViewController.xib"),
+                .copy("Controller/OrderDetailVC.xib"),
+                .copy("Controller/OrderListVC.xib"),
+                .copy("Controller/ProfileVC.xib"),
+                .copy("Controller/RatePopupViewController.xib"),
                 .copy("Controller/VideoDetailViewController.xib"),
-                .copy("check-box-empty.png"),
-                .copy("check-box.png")
+                .copy("Controller/VideoViewController.xib"),
+                .copy("TouchETVPlugin/pre-roll-02.mp4"),
             ]),
         .testTarget(
             name: "TouchETVPluginTests",

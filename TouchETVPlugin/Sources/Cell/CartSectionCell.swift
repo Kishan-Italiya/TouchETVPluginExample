@@ -10,6 +10,7 @@ import UIKit
 class CartSectionCell: UITableViewCell {
 
     @IBOutlet weak var checkBTN: UIButton!
+    @IBOutlet weak var checkIMG: UIImageView!
     @IBOutlet weak var brandNameLBL: UILabel!
     @IBOutlet weak var backUV: UIView!
     @IBOutlet weak var brandNameLeftCON: NSLayoutConstraint!
@@ -30,7 +31,7 @@ class CartSectionCell: UITableViewCell {
        
     }
     @IBAction func checkClick_Action(_ sender: UIButton) {
-        if checkBTN.currentImage == UIImage(named: "check-box-empty"){
+        if checkIMG.image == UIImage(named: "check-box-empty", in: Bundle.module, with: nil){
             if let action = brandSelectChange{
                 action(true)
             }

@@ -89,6 +89,9 @@
                                                 <real key="value" value="43"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnProceedToCheckout:" destination="-1" eventType="primaryActionTriggered" id="5l8-9h-sgK"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item (0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4c-SE-Tf5">
                                         <rect key="frame" x="1707" y="15" width="113" height="40"/>

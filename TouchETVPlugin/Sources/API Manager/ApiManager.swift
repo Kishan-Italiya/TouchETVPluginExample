@@ -73,7 +73,9 @@ extension UIViewController  {
             return nil
         }
     }
-
+    func delete_api_request_withJson(_ url: String, params: [String: Any], headers: HTTPHeaders? = nil) -> DataRequest {
+       return AF.request(url, method: HTTPMethod.delete, parameters: params,encoding: JSONEncoding.default, headers: headers)
+    }
 }
 
 public class APIManager {
