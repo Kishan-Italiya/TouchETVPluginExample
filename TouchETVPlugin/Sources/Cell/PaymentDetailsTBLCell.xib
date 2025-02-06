@@ -66,7 +66,7 @@
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s62-Nb-fz5">
                                         <rect key="frame" x="0.0" y="0.0" width="960" height="135"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="Button"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
                                             <action selector="addCardClick_Action:" destination="fBs-An-CcD" eventType="primaryActionTriggered" id="lzC-NN-JLK"/>
@@ -105,7 +105,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7d9-25-2sZ">
                                 <rect key="frame" x="20" y="155" width="50" height="50"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
                                     <action selector="addCardClick_Action:" destination="fBs-An-CcD" eventType="primaryActionTriggered" id="Jgo-l4-ddU"/>
@@ -121,7 +121,7 @@
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMm-HP-1Jq">
                                 <rect key="frame" x="20" y="310" width="50" height="50"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
                                     <action selector="addCardClick_Action:" destination="fBs-An-CcD" eventType="primaryActionTriggered" id="tkI-Jh-e1a"/>
@@ -296,7 +296,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcG-FY-gte">
                                 <rect key="frame" x="20" y="774" width="50" height="50"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
                                     <action selector="saveCardClick_Action:" destination="fBs-An-CcD" eventType="primaryActionTriggered" id="SCi-NB-BF6"/>
@@ -376,6 +376,14 @@
             <point key="canvasLocation" x="-101" y="336.5"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="7PD-JA-ezo">
+            <size key="intrinsicContentSize" width="117" height="47"/>
+        </designable>
+        <designable name="nx8-1g-VRy">
+            <size key="intrinsicContentSize" width="341" height="47"/>
+        </designable>
+    </designables>
     <resources>
         <image name="check-box-empty" width="48" height="49"/>
         <image name="visa logo" width="111" height="72"/>

@@ -943,7 +943,7 @@ extension VideoViewController : UICollectionViewDelegate, UICollectionViewDelega
                 print("Failed to encode URL string")
             }
             cell.titleLBL.text = "$\(productDic.productSkus?.first?.price ?? 0)"
-            cell.countLBL.text = "\(indexPath.row + 1)"
+            cell.countLBL.isHidden = true//text = "\(indexPath.row + 1)"
             
             return cell
         }
@@ -1349,16 +1349,8 @@ extension VideoViewController{
                 
                 
                 var  customView = TopImageBottomLabelView()
+                customView = TopImageBottomLabelView(frame: CGRect(x: mainX, y: mainY, width: 160, height: 160))
                 
-//                if DeviceUtils.isPad {
-//                    customView = TopImageBottomLabelView(frame: CGRect(x: mainX, y: mainY, width: 160, height: 160))
-//                }else{
-//                    if isDevicePortrait() {
-//                        customView = TopImageBottomLabelView(frame: CGRect(x: mainX, y: mainY, width: 40, height: 30))
-//                    } else if isDeviceLandscape() {
-//                        customView = TopImageBottomLabelView(frame: CGRect(x: mainX, y: mainY, width: 160, height: 160))
-//                    }
-//                }
                 
                 let deviceCoordinates = CGRect(x: mainX, y: mainY, width: 80, height: 80)
                 customView.configure(image: encodedUrlString, productDic: tempProduct, Const: deviceCoordinates)
@@ -1504,10 +1496,6 @@ extension VideoViewController{
                             self.dotCollectionView.reloadData()
                         }
                         
-                        if let index = self.isOpenItemARY.firstIndex(where: { $0 == prodcut.id }) {
-                            self.isOpenItemARY.remove(at: index)
-                        }
-                        
                         self.animatePositionChange(tempView: viewToRemove, tempProduct: prodcut)
                     }
                 } else {
@@ -1518,6 +1506,8 @@ extension VideoViewController{
         }
     }
     func animatePositionChange(tempView:UIView, tempProduct : Product) {
+        
+
         let newX: CGFloat = 20//50 + CGFloat(self.prodcutARY.count * 50)
         let newY: CGFloat = 50 + CGFloat(self.prodcutARY.count * 50)//self.cloaseUV.frame.origin.y
         
@@ -1527,6 +1517,7 @@ extension VideoViewController{
             if completed {
                 tempView.removeFromSuperview()
                 var isAvaialable = false
+                
                 for i in 0..<self.prodcutARY.count{
                     let pid = self.prodcutARY[i].id
                     if pid == tempProduct.id{
@@ -1534,7 +1525,10 @@ extension VideoViewController{
                         break
                     }
                 }
-                if isAvaialable == false {
+                let selectedID = tempProduct.id ?? 0
+                let isAvailableInOpen = self.isOpenItemARY.contains(selectedID)
+                
+                if isAvaialable == false && isAvailableInOpen == true {
                     var tempProduct = tempProduct
                     let currentTimeInSeconds = CMTimeGetSeconds(self.CTTime)
                     tempProduct.updateRemoveTime(to: currentTimeInSeconds + 20.0)
@@ -1542,6 +1536,10 @@ extension VideoViewController{
                     self.productCV.reloadData()
                 }
                 
+                if let index = self.isOpenItemARY.firstIndex(where: { $0 == tempProduct.id }) {
+                    self.isOpenItemARY.remove(at: index)
+                }
+
 //                DispatchQueue.main.asyncAfter(deadline: .now() + 8) { // 0.01 seconds delay (10 milliseconds)
 //                    if let indexToRemove = self.prodcutARY.firstIndex(where: { $0.id == tempProduct.id }) {
 //                        self.prodcutARY.remove(at: indexToRemove)
