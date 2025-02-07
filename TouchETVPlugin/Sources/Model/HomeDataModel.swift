@@ -26,7 +26,7 @@ public struct HomeListModel: Codable {
     let brands: [Brand]?
     let products: JSONNull?
     let loadHierarchy: Bool?
-    let number: JSONNull?
+    let number: Int?
     let type: String?
     let subtype: String?
     let year: Int?
